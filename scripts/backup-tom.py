@@ -160,7 +160,10 @@ Espelho seletivo do estado operacional do Hermes. NÃO é backup do sistema inte
         
         now_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
         run(f'git -c user.name="hermes-backup" -c user.email="backup@tom" commit -qm "backup: Hermes {AGENT} {now_str} Manaus"', env=env)
-        res = run('git push -q origin HEAD', env=env)
+        
+        # Rebase on latest to avoid non-fast-forward; force push (backup unilateral)
+        run('git pull --rebase -q origin HEAD', env=env)
+        res = run('git push -f -q origin HEAD', env=env)
         if res.returncode != 0:
             print(f'[{AGENT}] PUSH FAILED: {res.stderr.strip()}')
             log(f'PUSH FAILED: {res.stderr.strip()}')
