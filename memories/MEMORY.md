@@ -1,0 +1,3 @@
+Obsidian vault local configurado em 2026-06-03: /opt/data/Documents/Obsidian Vault com OBSIDIAN_VAULT_PATH no .env. Pastas: 0 Inbox, 1 Notas, 2 Projetos, 3 Decisões, 4 Tags. MOC.md criado. Skill 'obsidian' atualizada com path real. Modo local (filesystem-first). pendente: conectar Obsidian Sync remoto amanhã (ob login, ob sync-setup, etc). Node.js 22 disponível. Backup para GitHub funcionando (d9987bff6391, 00:00 Manaus).
+§
+Pendência configurada por Rodrigo: integrar Notion (acesso/autenticação). Skill 'notion' disponível. Aguardar configuração quando ele voltar.

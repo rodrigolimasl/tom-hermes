@@ -82,7 +82,7 @@ def main():
         
         # Always sync with remote before we work (handles init-without-clone case)
         run(f'git -C {WORKDIR} fetch -q origin', env=env)
-        run(f'git -C {WORKDIR} reset -q --hard origin/HEAD', env=env)
+        run(f'git -C {WORKDIR} checkout -q -B main origin/main', env=env)
         
         # Clean worktree
         for item in os.listdir(WORKDIR):
@@ -162,8 +162,8 @@ Espelho seletivo do estado operacional do Hermes. NÃO é backup do sistema inte
         run(f'git -c user.name="hermes-backup" -c user.email="backup@tom" commit -qm "backup: Hermes {AGENT} {now_str} Manaus"', env=env)
         
         # Rebase on latest to avoid non-fast-forward; force push (backup unilateral)
-        run('git pull --rebase -q origin HEAD', env=env)
-        res = run('git push -f -q origin HEAD', env=env)
+        run('git pull --rebase -q origin main', env=env)
+        res = run('git push -f -q origin main', env=env)
         if res.returncode != 0:
             print(f'[{AGENT}] PUSH FAILED: {res.stderr.strip()}')
             log(f'PUSH FAILED: {res.stderr.strip()}')
