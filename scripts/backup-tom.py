@@ -70,15 +70,19 @@ def main():
         run(f'git config --global --add safe.directory {WORKDIR}', env=env)
         
         # Clone if needed
-        if not os.path.isdir(os.path.join(WORKDIR, '.git')):
+        needs_clone = not os.path.isdir(os.path.join(WORKDIR, '.git'))
+        if needs_clone:
             clone = run(f'git clone -q https://github.com/{REPO_SLUG}.git {WORKDIR}', env=env)
             if clone.returncode == 0:
-                run(f'git -C {WORKDIR} fetch -q origin', env=env)
-                run(f'git -C {WORKDIR} reset -q --hard origin/HEAD', env=env)
+                pass  # clone já traz tudo
             else:
                 # First backup - init empty repo
                 run(f'git -C {WORKDIR} init -q', env=env)
                 run(f'git -C {WORKDIR} remote add origin https://github.com/{REPO_SLUG}.git', env=env)
+        
+        # Always sync with remote before we work (handles init-without-clone case)
+        run(f'git -C {WORKDIR} fetch -q origin', env=env)
+        run(f'git -C {WORKDIR} reset -q --hard origin/HEAD', env=env)
         
         # Clean worktree
         for item in os.listdir(WORKDIR):
