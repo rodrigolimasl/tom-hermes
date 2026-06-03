@@ -1,5 +1,5 @@
 # Backup operacional — Hermes (Tom)
-Espelho seletivo do estado operacional do Hermes. NAO e backup do sistema inteiro.
-- Ultimo backup: 2026-06-03 01:02 UTC
-- Incluido: config.yaml (sanitizado), SOUL, skills/, scripts/, cron/ (defs), memories/**/*.md
-- Excluido: .env, tokens, credenciais, sessoes, logs, caches, locks, state DB, temporarios
+Espelho seletivo do estado operacional do Hermes. NÃO é backup do sistema inteiro.
+- Último backup: 2026-06-03 03:55 
+- Incluído: config.yaml (sanitizado), SOUL, skills/, scripts/, hooks/, plans/, cron/ (defs), memories/**/*.md
+- Excluído: .env, tokens, credenciais, sessões, logs, caches, locks, state DB, temporários

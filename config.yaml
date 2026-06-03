@@ -6,7 +6,7 @@ model:
   context_length: 65536
 providers: {}
 fallback_providers: []
-credential_pool_strategies: ""
+credential_pool_strategies: {}
 toolsets:
 - hermes-cli
 agent:
@@ -242,9 +242,9 @@ display:
   copy_shortcut: auto
 dashboard:
   theme: default
-  show_token_analytics: ""
+  show_token_analytics: false
   oauth:
-    client_id: ''
+    client_id: "" ''
     portal_url: ''
   public_url: ''
 privacy:
@@ -342,7 +342,7 @@ curator:
     enabled: true
     keep: 5
 honcho: {}
-timezone: ''
+timezone: America/Manaus
 slack:
   require_mention: true
   free_response_channels: ''
@@ -358,7 +358,7 @@ discord:
   history_backfill_limit: 50
   reactions: true
   channel_prompts: {}
-  dm_role_auth_guild: ""
+  dm_role_auth_guild: ''
   server_actions: ''
   allow_any_attachment: false
   max_attachment_bytes: 33554432
@@ -382,14 +382,15 @@ approvals:
   cron_mode: deny
   mcp_reload_confirm: true
   destructive_slash_confirm: true
-command_allowlist: []
+command_allowlist:
+- script execution via -e/-c flag
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false
 personalities: {}
 security:
   allow_private_urls: false
-  redact_secrets: ""
+  redact_secrets: true
   tirith_enabled: true
   tirith_path: tirith
   tirith_timeout: 5
@@ -463,7 +464,7 @@ x_search:
 secrets:
   bitwarden:
     enabled: false
-    access_token_env: ""
+    access_token_env: BWS_ACCESS_TOKEN
     project_id: ''
     cache_ttl_seconds: 300
     override_existing: true

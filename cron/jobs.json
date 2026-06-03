@@ -1,0 +1,48 @@
+{
+  "jobs": [
+    {
+      "id": "d9987bff6391",
+      "name": "Daly Backup - Tom",
+      "prompt": "Executar backup do Hermes Agent para GitHub.",
+      "skills": [],
+      "skill": null,
+      "model": "claude-sonnet-4",
+      "provider": "ollama",
+      "base_url": null,
+      "script": "backup-tom.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-02T22:25:14.691076-04:00",
+      "next_run_at": "2026-06-03T04:00:00-04:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8530042171",
+        "chat_name": "Rodrigo Lima",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": "/opt/data/scripts",
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-02T22:25:14.691362-04:00"
+}
