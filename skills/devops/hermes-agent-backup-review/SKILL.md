@@ -148,11 +148,19 @@ This ensures only explicitly copied items survive.
 
 ### 5. Git operations
 
+⚠️ **Crítico:** NUNCA use `HEAD` genérico — causes detached HEAD e push failures.
+See `references/git-operations-lessons.md` for detailed pitfalls.
+
 - Clone if new: `git clone -q "https://github.com/${REPO_SLUG}.git" "$WORKDIR"`
-- Sync if existing: `git fetch -q origin && git reset -q --hard origin/HEAD`
+- Sync if existing: `git fetch -q origin && git checkout -q -B main origin/main`
+  - ❌ NUNCA use `git reset --hard origin/HEAD` (causa detached HEAD → push fails)
+  - ✅ Use `git checkout -B main origin/main` (branch explícito)
 - Skip commit if no diff: `git diff --cached --quiet`
 - Commit message: `backup: Hermes ${AGENT} YYYY-MM-DD HH:MM Timezone`
-- Push: `git push -q origin HEAD`
+- Pull antes do push: `git pull --rebase -q origin main`
+- Push: `git push -f -q origin main` (force push para repositórios unilaterais de backup)
+- Prefer Python para lógica Git complexa: `subprocess.run(..., env=env_dict)` evita escaping hell
+- Wrapper bash fino: `set -euo pipefail; exec python3 /opt/data/scripts/backup-tom.py "$@"`
 
 ### 6. Document cron jobs
 
