@@ -1,9 +1,9 @@
 {
-  "last_report_path": null,
-  "last_run_at": "2026-06-02T14:22:18.330069+00:00",
-  "last_run_duration_seconds": null,
-  "last_run_summary": "deferred first run — curator seeded, will run after one interval; use `hermes curator run --dry-run` to preview now",
+  "last_report_path": "/opt/data/logs/curator/20260609-151752",
+  "last_run_at": "2026-06-09T15:17:52.028396+00:00",
+  "last_run_duration_seconds": 25.975778,
+  "last_run_summary": "auto: no changes; llm: API call failed after 3 retries: Connection error.",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 0
+  "run_count": 1
 }
