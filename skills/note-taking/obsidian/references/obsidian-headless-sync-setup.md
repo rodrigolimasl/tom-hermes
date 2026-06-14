@@ -18,11 +18,12 @@ npm install -g obsidian-headless --prefix /opt/data/home/.npm-global
 
 ## Fluxo de setup do Sync (pendente)
 
-1. `ob login` — login interativo no Obsidian Cloud (requires PTY)
+1. `ob login` — login interativo no Obsidian Cloud (DEVE ser feito manualmente pelo usuário via terminal)
 2. `ob sync-list-remote` — lista vaults remotos disponíveis
 3. `ob sync-setup --vault "NOME" --path "/opt/data/Documents/Obsidian Vault" --device-name "TOM"`
 4. `ob sync --path "/opt/data/Documents/Obsidian Vault"` — teste manual
-5. `ob sync --path "/opt/data/Documents/Obsidian Vault" --continuous` — quando estável
+5. **Análise de Herança:** Antes de registrar novas notas, explorar o vault для entender a taxonomia, tags e a estrutura de MOCs implementada por agentes anteriores, garantindo a continuidade do grafo de conhecimento.
+6. `ob sync --path "/opt/data/Documents/Obsidian Vault\" --continuous` — quando estável
 
 ## Pitfall encontrado em sessão (2026-06-03)
 

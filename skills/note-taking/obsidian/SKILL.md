@@ -14,7 +14,21 @@ Use a known or resolved vault path before calling file tools.
 
 The documented vault-path convention is the `OBSIDIAN_VAULT_PATH` environment variable, for example from `~/.hermes/.env`. If it is unset, use `~/Documents/Obsidian Vault`.
 
-**This environment (Rodrigo's server):** The vault lives at `/opt/data/Documents/Obsidian Vault` with folders:\n`0 Inbox/`, `1 Notas/`, `2 Projetos/`, `3 Decisões/`, `4 Tags/`.\nMOC lives at the root as `MOC.md`.\n\nObsidian Headless Sync (`ob`) está instalado em `/opt/data/home/.npm-global/bin/ob` mas\nainda não configurado para sync remoto — o vault atual é local-only.\nSe sync remoto for necessário, veja `references/obsidian-headless-sync-setup.md`.\n
+**This environment (Rodrigo's server):** The vault lives at `/opt/data/Documents/Obsidian Vault` and is synced with the remote vault `rodrigolima-memorias`.
+
+### Vault Taxonomy (rodrigolima-memorias)
+To maintain consistency with the established structure:
+- **`Memoria Auxiliar/`**: Operational notes, indices (`Indice.md`), and general knowledge.
+- **`Projetos/`**: Project-specific folders. Use numeric sequencing for files (e.g., `01 - Requisitos`, `02 - Design`).
+- **`Memoria Auxiliar/Inbox.md`**: Destination for uncategorized or raw information.
+
+Obsidian Headless Sync (`ob`) está instalado em `/opt/data/home/.npm-global/bin/ob`.
+Para gerenciar a sincronização remota:
+- `ob login`: Verifica a conta conectada.
+- `ob sync-list-remote`: Lista vaults remotos.
+- `ob sync-list-local`: Lista vaults locais configurados para sync.
+- `ob sync-status`: Verifica o status de sincronização.
+Se sync remoto for necessário, veja `references/obsidian-headless-sync-setup.md`.
 File tools do not expand shell variables. Do not pass paths containing `$OBSIDIAN_VAULT_PATH` to `read_file`, `write_file`, `patch`, or `search_files`; resolve the vault path first and pass a concrete absolute path. Vault paths may contain spaces, which is another reason to prefer file tools over shell commands.
 
 If the vault path is unknown, `terminal` is acceptable for resolving `OBSIDIAN_VAULT_PATH` or checking whether the fallback path exists. Once the path is known, switch back to file tools.
@@ -77,6 +91,13 @@ Use `patch` for focused note changes when the current content gives you stable c
 ## Wikilinks
 
 Obsidian links notes with `[[Note Name]]` syntax. When creating notes, use these to link related content.
+
+## Troubleshooting and Lessons Learned
+
+### Auth Token Path Mismatch (2026-06-13)
+The `ob` CLI may look for authentication in `~/.config/obsidian-headless/` while the token is stored in `/opt/data/.config/obsidian-headless/`.
+**Fix:** Create a symbolic link to ensure the CLI finds the auth token:
+`mkdir -p ~/.config && ln -s /opt/data/.config/obsidian-headless ~/.config/obsidian-headless`
 
 ## Troubleshooting
 
