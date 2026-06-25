@@ -14,7 +14,8 @@ Use a known or resolved vault path before calling file tools.
 
 The documented vault-path convention is the `OBSIDIAN_VAULT_PATH` environment variable, for example from `~/.hermes/.env`. If it is unset, use `~/Documents/Obsidian Vault`.
 
-**This environment (Rodrigo's server):** The vault lives at `/opt/data/Documents/Obsidian Vault` and is synced with the remote vault `rodrigolima-memorias`.
+**This environment (Rodrigo's server):** The vault lives at `/opt/data/Documents/Obsidian Vault` and is synced with the remote vault `rodrigolima-memorias`. 100% of memory operations must target this vault to ensure backup security via Obsidian Sync.
+
 
 ### Vault Taxonomy (rodrigolima-memorias)
 To maintain consistency with the established structure:
@@ -99,11 +100,7 @@ The `ob` CLI may look for authentication in `~/.config/obsidian-headless/` while
 **Fix:** Create a symbolic link to ensure the CLI finds the auth token:
 `mkdir -p ~/.config && ln -s /opt/data/.config/obsidian-headless ~/.config/obsidian-headless`
 
-## Troubleshooting
-
-### No vault found on the server
-
-If `OBSIDIAN_VAULT_PATH` is unset AND the fallback path `~/Documents/Obsidian Vault` does not exist:
+## List Curation and Validation\n\nWhen managing curated lists (e.g., checklists, tracking logs, catalogs) within the vault:\n- **Do not assume the vault is the ground truth** for factual data. User notes can contain typos, hallucinations from previous agents, or outdated info.\n- **Verify before you edit:** If a user reports a discrepancy or cannot find an item from a list, either perform external research (web search) or consult official sources to establish the ground truth before patching the note.\n- **Propose changes first:** Present the verified ground truth to the user and confirm the correction before modifying the vault.\n\n## Troubleshooting\n\n### No vault found on the server\n\nIf `OBSIDIAN_VAULT_ uma base de dados externa a atualizar\n\nIf `OBSIDIAN_VAULT_PATH` is unset AND the fallback path `~/Documents/Obsidian Vault` does not exist:
 
 1. **Search the filesystem:**
    ```
