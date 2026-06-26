@@ -446,26 +446,26 @@
     "created_at": "2026-06-02T14:51:44.152582+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-25T00:23:26.741025+00:00",
-    "last_viewed_at": "2026-06-25T00:23:26.725968+00:00",
+    "last_used_at": "2026-06-25T14:23:46.821140+00:00",
+    "last_viewed_at": "2026-06-25T14:23:46.814362+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 12,
-    "view_count": 12
+    "use_count": 13,
+    "view_count": 13
   },
   "hermes-agent-backup-review": {
     "archived_at": null,
     "created_at": "2026-06-03T02:24:16.151923+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-06-03T11:09:42.175571+00:00",
-    "last_used_at": "2026-06-25T00:23:26.733113+00:00",
-    "last_viewed_at": "2026-06-25T00:23:26.718994+00:00",
+    "last_used_at": "2026-06-25T14:28:06.617008+00:00",
+    "last_viewed_at": "2026-06-25T14:28:06.609745+00:00",
     "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 7,
+    "view_count": 7
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -796,14 +796,14 @@
     "archived_at": null,
     "created_at": "2026-06-15T15:02:25.820027+00:00",
     "created_by": "agent",
-    "last_patched_at": null,
-    "last_used_at": "2026-06-25T02:01:51.506753+00:00",
-    "last_viewed_at": "2026-06-25T02:01:51.499763+00:00",
-    "patch_count": 0,
+    "last_patched_at": "2026-06-25T14:32:17.964235+00:00",
+    "last_used_at": "2026-06-25T14:26:34.263269+00:00",
+    "last_viewed_at": "2026-06-25T14:26:34.256175+00:00",
+    "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "ocr-and-documents": {
     "archived_at": null,

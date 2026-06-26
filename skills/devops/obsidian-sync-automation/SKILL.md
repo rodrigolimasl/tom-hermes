@@ -25,8 +25,8 @@ When performing a manual sync or verifying state:
 To avoid manual intervention and reduce latency between the server and the MacBook, a recurring push-loop is implemented via `cronjob`.
 
 ### Cron Configuration
-- **Schedule:** Every 15 minutes (`*/15 * * * *`).
-- **Prompt:** "Execute the sync command to push vault changes to the cloud: /opt/data/home/.npm-global/bin/ob sync"
+- **Schedule:** Every 2 hours (`0 */2 * * *`).
+- **Execution Mode:** `no_agent=true` using a local script (`ob-sync.sh`) to ensure silent success and notifications only on failure.
 - **Verification:** Check `cronjob action='list'` to ensure the job is `enabled` and running.
 
 ## Pitfalls & Troubleshooting
