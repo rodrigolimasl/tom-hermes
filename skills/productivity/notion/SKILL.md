@@ -439,6 +439,7 @@ Headings 5/6 collapse to H4. Multiple `>` lines render as separate quote blocks 
 
 ## Notes
 
+- **User Schema:** See `references/user-database-schema.md` for the specific structure of the `Controle de Atividades` database.
 - Page/database IDs are UUIDs (with or without dashes — both accepted).
 - Rate limit: ~3 requests/second average. The CLI doesn't bypass this.
 - The API cannot set database **view** filters — that's UI-only.
