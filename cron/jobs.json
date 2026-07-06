@@ -20,15 +20,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-02T22:25:14.691076-04:00",
-      "next_run_at": "2026-07-06T04:00:00-04:00",
-      "last_run_at": "2026-07-04T04:00:46.812751-04:00",
+      "next_run_at": "2026-07-07T04:00:00-04:00",
+      "last_run_at": "2026-07-05T04:00:36.424968-04:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -63,15 +63,15 @@
       "schedule_display": "0 */2 * * *",
       "repeat": {
         "times": null,
-        "completed": 215
+        "completed": 227
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-15T10:22:17.073034-04:00",
-      "next_run_at": "2026-07-05T06:00:00-04:00",
-      "last_run_at": "2026-07-05T02:00:32.137405-04:00",
+      "next_run_at": "2026-07-06T06:00:00-04:00",
+      "last_run_at": "2026-07-06T02:00:02.838866-04:00",
       "last_status": "error",
       "last_error": "Script not found: /opt/data/scripts/ob-sync.sh",
       "last_delivery_error": null,
@@ -87,5 +87,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-07-05T04:00:32.926292-04:00"
+  "updated_at": "2026-07-06T04:00:03.633994-04:00"
 }
