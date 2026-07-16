@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/opt/data/logs/curator/20260708-160227",
-  "last_run_at": "2026-07-08T16:02:27.572531+00:00",
-  "last_run_duration_seconds": 481.134552,
-  "last_run_summary": "auto: no changes; llm: I have completed a consolidation pass on the skill library, focusing on the `github-*` prefix cluster.\n\n### Analysis and Action\nI identified a strong cluster of narrow GitHub-related skills: `github-auth`, `github-code-review`, `github-issu…\narchived 5 skill(s):\n  • github-auth — pruned (stale)\n  • github-code-review — pruned (stale)\n  • github-issues — pruned (stale)\n  • github-pr-workflow — pruned (stale)\n  • github-repo-management — pruned (stale)\nfull report: hermes curator status",
+  "last_report_path": "/opt/data/logs/curator/20260715-160519",
+  "last_run_at": "2026-07-15T16:05:19.349932+00:00",
+  "last_run_duration_seconds": 425.916638,
+  "last_run_summary": "auto: 80 marked stale; llm: I have completed a consolidation pass on the skill library, focusing on the `hermes-agent` domain. I identified a cluster of narrow, session-specific skills that all served the broader class of \"Hermes Agent internals and maintenance.\"\n\nI h…\narchived 5 skill(s):\n  • debugging-hermes-tui-commands → hermes-agent\n  • hermes-agent-backup-review → hermes-agent\n  • hermes-agent-skill-authoring → hermes-agent\n  • hermes-config-workflow → hermes-agent\n  • hermes-s6-container-supervision → hermes-agent\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 4
+  "run_count": 5
 }
